@@ -1,0 +1,10 @@
+<h3>File uploaded successfully!</h3>
+<p>Here is your secure link:</p>
+<p><a href="{{ url_for('download.download_file', token=token, _external=True) }}">
+    {{ url_for('download.download_file', token=token, _external=True) }}
+</a></p>
+<p>Share this link with anyone you want to give access to the file.</p>
+<p>Scan this QR to download:</p>
+<img src="{{ url_for('static', filename='qr_' + token + '.png') }}" alt="QR Code">
+<h4>Scan the QR Code to download the file:</h4>
+<img src="{{ url_for('static', filename='qr_' + token + '.png') }}" alt="QR Code">
